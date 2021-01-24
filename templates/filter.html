@@ -2,6 +2,7 @@
 <html>
     <head>  
         <title>Home Page</title>
+        <link rel="stylesheet" href="./css/index.css">
         <style>
             body {
                 background-color: rgb(255, 81, 0);
@@ -12,6 +13,7 @@
                 color: white;
                 font-size: 60px;
                 font-weight: 900;
+                text-shadow: 2px 2px 4px black;
             }
             .titleBox {
                 display: flex;
@@ -19,10 +21,14 @@
                 padding-left: 200px;
             }
             .header1{
-                background-image: url("https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80");
+                background-image: url("https://images.unsplash.com/photo-1584033115915-427b9b62b1ba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDh8fGRqfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60");
                 display: flex;
-                background-size: 100% 800%; 
-                background-position: -290px -500px;
+                background-size: 120%; 
+                background-position: -780px 980px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
             .header2 {
                 background-color: black;
@@ -55,19 +61,36 @@
                 align-items: center;
             }
             .button {
+                background-image: url("https://img.icons8.com/plasticine/2x/lo-fi.png");
+                background-size: 131%; 
+                background-position: -20px -39px;
+                border-radius: 20px;
                 border: none;
-                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                -webkit-text-stroke: 1px black;
+                color: white;
+                text-shadow:
+                   3px 3px 0 #000,
+                   -1px -1px 0 #000,  
+                   1px -1px 0 #000,
+                   -1px 1px 0 #000,
+                   1px 1px 0 #000;
+                font-size: 25px;
+                font-weight: 900;
                 padding: 10px;
                 text-align: center;
                 text-decoration: none;
                 display: flex;
-                font-size: 16px;
                 cursor: pointer;
-                width: 120px;
+                width: 124px;
                 justify-content: center;
-                height: 70px;
+                height: 86px;
                 align-items: center;
                 margin: 3px 2px;
+            }
+            .button:hover {opacity: .5;}
+            .button:active {
+                transform: translateY(4px);
             }
             .buttonGroup {
                 width: 35%;
@@ -85,6 +108,330 @@
                 align-items: center;
                 justify-content: center;
             }
+            .middle {
+                background-color: rgb(255, 175, 101);
+                width: 55%;
+                height: 100%;
+                padding-bottom: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .right {
+                background-color: rgb(134, 155, 224);
+                width: 45%;
+                height: 100%;
+                padding-bottom: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .columns {
+                width: 75%;
+                height: 90%;
+                padding-bottom: 90%;
+                display: flex;
+                flex-direction: row;
+            }
+            .page {
+                display: flex;
+                flex-direction: row;
+            }
+            .left {
+                display: flex;
+                width: 30%;
+                font-family: Monaco, Helvetica, sans-serif;
+                color: white;
+                font-size: 40px;
+                font-weight: 100;
+                flex-direction: column;
+            }
+            .playlist {
+                margin: 10px;
+                margin-left: 20px;
+            }
+            .playlistList {
+                width: 100%;
+                display: flex;
+                height: 21%;
+                background-color: white;
+                color: rgb(255, 81, 0);
+            }
+            ul {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 900;
+                max-height: 100%;
+                overflow: scroll;
+                padding: 20px;
+                padding-left: 30px;
+                margin: 0px;
+                line-height: 150%;
+                width: 100%;
+            }
+            .colTitle {
+                display: flex;
+                font-family: Monaco, Helvetica, sans-serif;
+                color: white;
+                font-size: 40px;
+                font-weight: 100;
+                flex-direction: column;
+                margin: 10px;
+                margin-left: 20px;
+            }
+            .genres {
+                display: flex;
+                font-family: Monaco, Helvetica, sans-serif;
+                color: rgb(41, 72, 158);
+                font-size: 40px;
+                font-weight: 100;
+                flex-direction: column;
+                margin: 10px;
+                margin-left: 20px;
+                margin-bottom: 50px;
+            }
+            /* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(41, 72, 158);
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 10px;
+  transition: 0.3s;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(41, 72, 158);
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(157, 177, 229);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(157, 177, 229);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(41, 72, 158);
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.filterCol{
+    flex-direction: row;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.include{
+    width: 45%;
+    height: 17%;
+    font-size: 30px;
+    font-weight: 100;
+    justify-content: space-between;
+}
+.keyword {
+    display: flex;
+                font-family: Monaco, Helvetica, sans-serif;
+                color: rgb(41, 72, 158);
+                font-size: 20px;
+                font-weight: 900;
+                margin-top: 20px;
+                weight: 100%;
+                justify-content: flex-end;
+}
+.input {
+    width: 40px;
+}
+.smallGrp{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
         </style>
     </head>
+
+
+
+
+
+
+
+
+
+    <div>
+        <body>
+            <div class="header1">
+                <div class="titleBox">
+                    <a href="/"><div class="title">THE</div>
+                    <div class="title">FREEMIX</div></a>
+                </div>
+                <div class="buttonGroup">
+                    <button class="button">CREATE</button>
+                    <button class="button">ARTISTS</button>
+                    <button class="button">ABOUT</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="left">
+                    <div class="playlist">PLAYLIST</div>
+                    <div class="playlistList">
+                        <ul>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                            <div>song</div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="middle">
+                        <div class="colTitle">
+                            BASED ON THE FILTERS, WE THOUGHT YOU'D LIKE
+                        </div>
+                        <div class="genres">
+                            POP, RAP, HIP-HOP
+                        </div>
+
+                        <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Artist 1')">Artist 1</button>
+  <button class="tablinks" onclick="openCity(event, 'Artist 2')">Artist 2</button>
+  <button class="tablinks" onclick="openCity(event, 'Artist 3')">Artist 3</button>
+  <button class="tablinks" onclick="openCity(event, 'Artist 4')">Artist 4</button>
+  <button class="tablinks" onclick="openCity(event, 'Artist 5')">Artist 5</button>
+  <button class="tablinks" onclick="openCity(event, 'Artist 6')">Artist 6</button>
+  <button class="tablinks" onclick="openCity(event, 'Artist 7')">Artist 7</button>
+  
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<div id="Artist 1" class="tabcontent">
+  <h3>Artist 1</h3>
+  <p>Artist 1 - pop</p>
+</div>
+
+<div id="Artist 2" class="tabcontent">
+  <h3>Artist 2</h3>
+  <p>Artist 2 - rap</p> 
+</div>
+
+<div id="Artist 3" class="tabcontent">
+  <h3>Artist 3</h3>
+  <p>Artist 3 - hip-hop</p>
+</div>
+
+<div id="Artist 4" class="tabcontent">
+  <h3>Artist 4</h3>
+  <p>Artist 4 - pop</p>
+</div>
+
+<div id="Artist 5" class="tabcontent">
+  <h3>Artist 5</h3>
+  <p>Artist 5 - rap</p> 
+</div>
+
+<div id="Artist 6" class="tabcontent">
+  <h3>Artist 6</h3>
+  <p>Artist 6 - hip-hop</p>
+</div>
+
+<div id="Artist 7" class="tabcontent">
+  <h3>Artist 7</h3>
+  <p>Artist 7 - hip-hop</p>
+</div>
+
+                    </div>
+                    <div class="right">
+                        <div class="colTitle">
+                            FILTER
+                            <div class="filterCol">
+                                <div class="include">
+                                    INCLUDE
+                                    <div class="keyword">Keyword<input type="text" name="keyword"></div>
+                                    <div class="keyword">Titles<input type="text" name="titles"></div>
+                                    <div class="keyword">Lyrics<input type="text" name="lyrics"></div>
+                                    <div class="keyword">Artists<input type="text" name="artists"></div>
+                                    <div class="keyword">Genres<input type="text" name="genres"></div>
+                                    <div class="keyword">BPM<input type="text" name="bpm"></div>
+                                    <div class="keyword">Themes<input type="text" name="themes"></div>
+                                </div>
+                                <div class="include">
+                                    EXCLUDE
+                                    <div class="keyword">Keyword<input type="text" name="keyword"></div>
+                                    <div class="keyword">Titles<input type="text" name="titles"></div>
+                                    <div class="keyword">Lyrics<input type="text" name="lyrics"></div>
+                                    <div class="keyword">Artists<input type="text" name="artists"></div>
+                                    <div class="keyword">Genres<input type="text" name="genres"></div>
+                                    <div class="keyword">BPM<input type="text" name="bpm"></div>
+                                    <div class="keyword">Themes<input type="text" name="themes"></div>
+                                </div>
+                            </div>
+                            <div class="smallGrp">
+                                    <button class="button">GENERATE</button>
+                                    <button class="button">FINISH</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </div>
 </html>
