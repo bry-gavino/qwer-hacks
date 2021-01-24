@@ -168,3 +168,7 @@ prime/
 stage/
 pip-wheel-metadata/
 .vim/
+
+### QWER HACKS ###
+.gitignore
+node_modules
