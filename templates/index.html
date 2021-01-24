@@ -13,6 +13,7 @@
                 color: white;
                 font-size: 60px;
                 font-weight: 900;
+                text-shadow: 2px 2px 4px black;
             }
             .titleBox {
                 display: flex;
@@ -20,10 +21,14 @@
                 padding-left: 200px;
             }
             .header1{
-                background-image: url("https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80");
+                background-image: url("https://images.unsplash.com/photo-1584033115915-427b9b62b1ba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDh8fGRqfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60");
                 display: flex;
-                background-size: 100% 800%; 
-                background-position: -290px -500px;
+                background-size: 120%; 
+                background-position: -780px 980px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
             .header2 {
                 background-color: black;
@@ -83,6 +88,10 @@
                 align-items: center;
                 margin: 3px 2px;
             }
+            .button:hover {opacity: .5;}
+            .button:active {
+                transform: translateY(4px);
+            }
             .buttonGroup {
                 width: 35%;
                 justify-content: space-around;
@@ -99,17 +108,21 @@
                 align-items: center;
                 justify-content: center;
             }
+            a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
         </style>
     </head>
     <div>
         <body>
-            <div class="header2">
+            <div class="header1">
                 <div class="titleBox">
                     <div class="title">THE</div>
                     <div class="title">FREEMIX</div>
                 </div>
                 <div class="buttonGroup">
-                    <button class="button">CREATE</button>
+                    <a href="filter"><button class="button">CREATE</button></a>
                     <button class="button">ARTISTS</button>
                     <button class="button">ABOUT</button>
                 </div>
