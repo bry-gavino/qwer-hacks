@@ -6,5 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/filter/")
+def filter():
+    return render_template("filter.html")
+
 if __name__ == "__name__":
     app.run()
