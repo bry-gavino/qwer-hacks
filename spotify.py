@@ -5,7 +5,7 @@ Embedding a playlist
 Song Test
 https://open.spotify.com/track/05SUJyDZaEJaqwBr6UsKRH?si=Mr6NduYZR4GkFbW4fM8NOg
 
-AUTH TOKEN: BQDwwcEF-2dsmCETTqRmZETsd_s4I4E9xnKnQXceBq2zJ28xvyZg_JAMiOFgwhNkeLZBLKVRWdYlOuHWb64x0Fw_3-YbyKJwWiVlakle9IinMSPXUWLOqMbePRfFjPtBEU4FGUVmi7X0hpK4wvHc91YFng0-FX4
+AUTH TOKEN: removed
 
 https://api.spotify.com/v1/search?q=Digitalism&type=track%2Cartist&limit=10&offset=5
 
@@ -17,7 +17,7 @@ https://api.spotify.com/v1/search?q=Digitalism&type=track%2Cartist&limit=10&offs
 # QUERY_OFFSET = "&offset=5"
 
 BEARER = "Bearer "
-AUTH_TOKEN = "BQBO_smalYzCJmWdjbzaX9PzUUh2oHpGZD7SemK4rs04mJiJ5Hv3N7TsS3BhNfg921xwt1M4eiCfAY9jG6dZ7cAavwlcGZl0hJKm__LgqjzgIw6Xh6iorfGdRB8b14b5_2p5U2i0LDTd_VGNvyi4VoEtvdoj2oo"
+AUTH_TOKEN = "removed"
 
 import urllib3
 
